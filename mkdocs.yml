@@ -1,0 +1,50 @@
+site_name: Example Technical Knowledge Base
+site_description: An English-first, bilingual-ready template with fictional placeholder content.
+site_url: https://guohaoyu1688.github.io/bilingual-kb-starter/
+repo_url: https://github.com/GuoHaoyu1688/bilingual-kb-starter
+copyright: 'Code: MIT · Documentation: CC BY 4.0'
+docs_dir: docs
+site_dir: site
+theme:
+  name: material
+  custom_dir: overrides
+  language: en
+  font: false
+  palette:
+    primary: teal
+    accent: teal
+  features: [navigation.sections, search.highlight, search.suggest]
+plugins:
+  - kb-gate:
+      data_dir: data
+      rules_file: sensitive.yaml
+      auto_link: true
+  - search:
+      lang: [en, zh]
+      separator: '[\s\u200b\-]+'
+  - i18n:
+      docs_structure: folder
+      fallback_to_default: true
+      reconfigure_search: false
+      languages:
+        - locale: en
+          default: true
+          name: English
+          build: true
+        - locale: zh
+          name: Chinese content slot
+          build: true
+          theme:
+            language: en
+nav:
+  - Overview: index.md
+  - Principles: principles.md
+  - Equipment and processes: equipment.md
+  - Operations and diagnostics: operations.md
+  - Technical timeline: timeline.md
+  - Glossary: glossary.md
+  - References: references.md
+  - Contributing: contributing.md
+extra_css: [assets/custom.css]
+extra_javascript: [assets/custom.js]
+markdown_extensions: [admonition, tables, attr_list]

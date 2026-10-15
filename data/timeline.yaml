@@ -1,0 +1,12 @@
+- id: sample-start
+  date: '2024-01-01'
+  title: Example starting point
+  description: Fictional placeholder milestone. Replace with a cited public event.
+- id: sample-review
+  date: '2025-06-01'
+  title: Example review
+  description: Fictional placeholder review. No actual technical history is asserted.
+- id: sample-release
+  date: '2026-01-01'
+  title: Example documentation release
+  description: Fictional milestone demonstrating the timeline component.
